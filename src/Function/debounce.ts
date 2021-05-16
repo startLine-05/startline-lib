@@ -4,10 +4,9 @@ let timeout: any = null;
  *
  * @param {Function} func 要执行的回调函数
  * @param {Number} wait 延时的时间
- * @param {Boolean} immediate 是否立即执行
  * @return null
  */
-export const debounce = (fnc: Function, wait: number, immediate: boolean) => {
+export const debounce = (fnc: Function, wait: number) => {
   if (timeout) {
     clearTimeout(timeout);
     timeout = null;
