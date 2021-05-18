@@ -6,7 +6,7 @@ function isArray(arr) {
     return Object.prototype.toString.call(arr) === "[object Array]";
 }
 // 深度克隆
-var deepClone = function (obj) {
+exports.deepClone = function (obj) {
     if ([null, undefined, NaN, false].includes(obj)) {
         return obj;
     }
@@ -21,4 +21,3 @@ var deepClone = function (obj) {
     }
     return newObJ;
 };
-exports.deepClone = deepClone;

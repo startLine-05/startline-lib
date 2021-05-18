@@ -7,10 +7,9 @@ var timeout = null;
  *
  * @param {Function} func 要执行的回调函数
  * @param {Number} wait 延时的时间
- * @param {Boolean} immediate 是否立即执行
  * @return null
  */
-var debounce = function (fnc, wait, immediate) {
+exports.debounce = function (fnc, wait) {
     if (timeout) {
         clearTimeout(timeout);
         timeout = null;
@@ -20,4 +19,3 @@ var debounce = function (fnc, wait, immediate) {
         clearTimeout(timeout);
     }, wait);
 };
-exports.debounce = debounce;

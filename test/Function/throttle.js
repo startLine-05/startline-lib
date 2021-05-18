@@ -11,7 +11,7 @@ var flag = false;
  * @param {Boolean} immediate 是否立即执行
  * @return null
  */
-var throttle = function (fnc, wait, immediate) {
+exports.throttle = function (fnc, wait, immediate) {
     if (immediate) {
         if (!flag) {
             flag = true;
@@ -33,4 +33,3 @@ var throttle = function (fnc, wait, immediate) {
         }
     }
 };
-exports.throttle = throttle;
