@@ -60,6 +60,16 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 
 /***/ }),
 
+/***/ "./test/Object/arrayMethod.js":
+/*!************************************!*\
+  !*** ./test/Object/arrayMethod.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.intersectArray = exports.toRepeatArray = exports.randomArray = void 0;\r\n//打乱数组\r\nexports.randomArray = function (arr) {\r\n    // 原理是sort排序,Math.random()产生0<= x < 1之间的数,会导致x-0.5大于或者小于0\r\n    return arr.sort(function () { return Math.random() - 0.5; });\r\n};\r\n//数组去重复\r\nexports.toRepeatArray = function (arr) {\r\n    return Array.from(new Set(arr));\r\n};\r\n//数组取并集\r\nexports.intersectArray = function (arr1, arr2) {\r\n    return exports.toRepeatArray(arr1.concat(arr2));\r\n};\r\n\n\n//# sourceURL=webpack://startline-lib/./test/Object/arrayMethod.js?");
+
+/***/ }),
+
 /***/ "./test/Object/deepClone.js":
 /*!**********************************!*\
   !*** ./test/Object/deepClone.js ***!
@@ -76,7 +86,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \***********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nvar deepClone_1 = __webpack_require__(/*! ./Object/deepClone */ \"./test/Object/deepClone.js\"); //深拷贝\r\n//工具函数 \r\nvar debounce_1 = __webpack_require__(/*! ./Function/debounce */ \"./test/Function/debounce.js\"); //防抖 \r\nvar throttle_1 = __webpack_require__(/*! ./Function/throttle */ \"./test/Function/throttle.js\"); //节流\r\nvar timeFormat_1 = __webpack_require__(/*! ./Function/timeFormat */ \"./test/Function/timeFormat.js\"); //时间格式化\r\nvar timeFrom_1 = __webpack_require__(/*! ./Function/timeFrom */ \"./test/Function/timeFrom.js\"); //时间格式化多少时间前\r\nexports.default = {\r\n    deepClone: deepClone_1.deepClone,\r\n    throttle: throttle_1.throttle,\r\n    debounce: debounce_1.debounce,\r\n    timeFormat: timeFormat_1.timeFormat,\r\n    timeFrom: timeFrom_1.timeFrom\r\n};\r\n\n\n//# sourceURL=webpack://startline-lib/./test/index.js?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nvar deepClone_1 = __webpack_require__(/*! ./Object/deepClone */ \"./test/Object/deepClone.js\"); //深拷贝\r\n//数组方法\r\nvar arrayMethod_1 = __webpack_require__(/*! ./Object/arrayMethod */ \"./test/Object/arrayMethod.js\");\r\n//工具函数\r\nvar debounce_1 = __webpack_require__(/*! ./Function/debounce */ \"./test/Function/debounce.js\"); //防抖\r\nvar throttle_1 = __webpack_require__(/*! ./Function/throttle */ \"./test/Function/throttle.js\"); //节流\r\nvar timeFormat_1 = __webpack_require__(/*! ./Function/timeFormat */ \"./test/Function/timeFormat.js\"); //时间格式化\r\nvar timeFrom_1 = __webpack_require__(/*! ./Function/timeFrom */ \"./test/Function/timeFrom.js\"); //时间格式化多少时间前\r\nexports.default = {\r\n    //函数部分\r\n    deepClone: deepClone_1.deepClone,\r\n    //数组部分\r\n    randomArray: arrayMethod_1.randomArray,\r\n    toRepeatArray: arrayMethod_1.toRepeatArray,\r\n    intersectArray: arrayMethod_1.intersectArray,\r\n    //函数部分\r\n    throttle: throttle_1.throttle,\r\n    debounce: debounce_1.debounce,\r\n    timeFormat: timeFormat_1.timeFormat,\r\n    timeFrom: timeFrom_1.timeFrom,\r\n};\r\nvar a = [2, 7, 4, 1, 5];\r\nvar b = [2, 3, 4];\r\nconsole.log(arrayMethod_1.randomArray(a));\r\nconsole.log(arrayMethod_1.intersectArray(a, b));\r\n\n\n//# sourceURL=webpack://startline-lib/./test/index.js?");
 
 /***/ })
 
