@@ -9,7 +9,7 @@ var timeout = null;
  * @param {Number} wait 延时的时间
  * @return null
  */
-exports.debounce = function (fnc, wait) {
+var debounce = function (fnc, wait) {
     if (timeout) {
         clearTimeout(timeout);
         timeout = null;
@@ -19,3 +19,4 @@ exports.debounce = function (fnc, wait) {
         clearTimeout(timeout);
     }, wait);
 };
+exports.debounce = debounce;
