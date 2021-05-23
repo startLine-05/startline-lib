@@ -13,9 +13,11 @@ export const unionArray = <T>(arr1: Array<T>, arr2: Array<T>): Array<T> => {
 };
 //两取数组的交集
 export const intersectArray = <T>(arr1: Array<T>, arr2: Array<T>): Array<T> => {
-  return arr1.filter((v) => {
-    return arr2.indexOf(v) > -1;
-  });
+  return toRepeatArray(
+    arr1.filter((v) => {
+      return arr2.indexOf(v) > -1;
+    })
+  );
 };
 //数组等份分割
 export const divisionArray = <T>(arr: Array<T>, number: number): Array<T> => {

@@ -27,6 +27,3 @@ export default {
   timeFormat,
   timeFrom,
 };
-let a = [2, 7, 4, 1, 5];
-let b = [2, 3, 4];
-console.log(timeFormat("1411613805", "y-|-mm-|-d"));

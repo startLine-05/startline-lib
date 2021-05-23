@@ -23,6 +23,3 @@ exports.default = {
     timeFormat: timeFormat_1.timeFormat,
     timeFrom: timeFrom_1.timeFrom,
 };
-var a = [2, 7, 4, 1, 5];
-var b = [2, 3, 4];
-console.log(timeFormat_1.timeFormat("1411613805", "y-|-mm-|-d"));

@@ -19,9 +19,9 @@ var unionArray = function (arr1, arr2) {
 exports.unionArray = unionArray;
 //两取数组的交集
 var intersectArray = function (arr1, arr2) {
-    return arr1.filter(function (v) {
+    return exports.toRepeatArray(arr1.filter(function (v) {
         return arr2.indexOf(v) > -1;
-    });
+    }));
 };
 exports.intersectArray = intersectArray;
 //数组等份分割
