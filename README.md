@@ -107,6 +107,30 @@ timeFormat(dateTime, fmt):
 timeFrom(dateTime, format)
 ```
 
+#### 5.模拟实现 new 函数
+
+```
+/**
+ * 模拟实现 new 函数
+ * @param Fn: Function 构造函数
+ * @param items: any[] 传递给构造函数的任意参数 ；
+ * @return string
+ */
+create(Fn: Function, ...items: any[]
+```
+
+#### 6.模拟实现 call 函数
+
+```
+/**
+ * 模拟实现 call 函数
+ * @param context: 绑定对象上构造函数
+ * @param arr: any[] 传递给绑定函数的任意参数 ；
+ * @return string
+ */
+Function.prototype.myCall = function (context: any, ...arr: any[])
+```
+
 ### 数组拓展
 
 #### 1.数组打乱

@@ -8,6 +8,7 @@ var debounce_1 = require("./Function/debounce"); //防抖
 var throttle_1 = require("./Function/throttle"); //节流
 var timeFormat_1 = require("./Function/timeFormat"); //时间格式化
 var timeFrom_1 = require("./Function/timeFrom"); //时间格式化多少时间前
+var common_1 = require("./Function/common");
 exports.default = {
     //函数部分
     deepClone: objectMethod_1.deepClone,
@@ -22,4 +23,5 @@ exports.default = {
     debounce: debounce_1.debounce,
     timeFormat: timeFormat_1.timeFormat,
     timeFrom: timeFrom_1.timeFrom,
+    create: common_1.create,
 };

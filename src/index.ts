@@ -12,6 +12,7 @@ import { debounce } from "./Function/debounce"; //防抖
 import { throttle } from "./Function/throttle"; //节流
 import { timeFormat } from "./Function/timeFormat"; //时间格式化
 import { timeFrom } from "./Function/timeFrom"; //时间格式化多少时间前
+import { create } from "./Function/common";
 export default {
   //函数部分
   deepClone,
@@ -26,4 +27,5 @@ export default {
   debounce,
   timeFormat,
   timeFrom,
+  create,
 };
