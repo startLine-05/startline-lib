@@ -1,3 +1,9 @@
+/*
+ * @Date: 2022-08-11 17:13:03
+ * @LastEditTime: 2022-08-11 17:14:37
+ * @Description: file content
+ * @FilePath: \startline-lib\src\Function\common.ts
+ */
 interface Person {
   [propName: string]: any;
 }
